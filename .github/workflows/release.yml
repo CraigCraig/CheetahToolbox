@@ -32,9 +32,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
         tag_name: ${{ github.run_id }}
-        release_name: ${{ github.event.release.name }} ${{ github.run_id }}
-        body: ${{ github.run_id }} |
-            ${{ github.event.head_commit.message }} |
+        release_name: ${{ github.name }} ${{ github.run_id }}
+        body: ${{ github.name }} ${{ github.run_id }}
+            ${{ github.event.head_commit.message }}
             ${{ github.event.release.body }}
         draft: false
         prerelease: false
