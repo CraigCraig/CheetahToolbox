@@ -29,7 +29,7 @@ public static class WinToolbox
 
         string title = $"WinToolbox v{App.Version}";
         if (debug) title += " (Debug)";
-        title += $" . CheeseyUtils v{CheesyUtils.Version}";
+        title += $" . CheeseyUtils v{CheeseyUtils.Version}";
 
         _app = new(new AppSettings(800, 600, title));
         var label = new Label(_app.RootElement, new(0, 0), new(128, 64), "Label");
