@@ -1,5 +1,5 @@
 # WinToolbox
-[![.NET](https://github.com/CraigCraig/WinToolbox/actions/workflows/dotnet.yml/badge.svg)](https://github.com/CraigCraig/WinToolbox/actions/workflows/release.yml) <br>
+[![.NET](https://github.com/CraigCraig/WinToolbox/actions/workflows/release.yml/badge.svg)](https://github.com/CraigCraig/WinToolbox/actions/workflows/release.yml) <br>
 This is a work in progress<br><br>
 Current stable version: <span style="color:red">Not Released</span><br>
 Current development version: <span style="color:green">0.0.1</span>
