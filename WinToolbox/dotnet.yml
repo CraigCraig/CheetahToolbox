@@ -24,4 +24,3 @@ jobs:
         dotnet-version: 8.0.x
     - name: Build
       run: dotnet build
-      working-directory: ../
