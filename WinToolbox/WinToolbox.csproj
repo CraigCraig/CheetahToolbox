@@ -12,5 +12,9 @@
 	  <ProjectReference Include="..\CheeseyUI\CheeseyUI.csproj" />
 	  <ProjectReference Include="..\CheeseyUtils\CheeseyUtils.csproj" />
 	</ItemGroup>
-
+	
+	<ItemGroup>
+		<None Include=".github\workflows\dotnet.yml" />
+	</ItemGroup>
+	
 </Project>
