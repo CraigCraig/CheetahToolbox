@@ -21,8 +21,10 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+    - name: Restore
+      run: dotnet restore
     - name: Build
-      run: dotnet build
+      run: dotnet build --no-restore
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
