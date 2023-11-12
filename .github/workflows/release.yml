@@ -17,6 +17,17 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: true
+        fetch-depth: 0 # required for github-action-get-previous-tag
+    - name: Get previous tag
+      id: previoustag
+      uses: 'WyriHaximus/github-action-get-previous-tag@v1'
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Get next minor version
+      id: semver
+      uses: 'WyriHaximus/github-action-next-semvers@v1'
+      with:
+         version: ${{ steps.previoustag.outputs.tag }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -31,10 +42,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.run_id }}
-        release_name: ${{ github.event.repository.name }} - ${{ github.run_id }}
-        body: ${{ github.event.repository.name }}
-            ${{ github.event.head_commit.message }}
-            ${{ github.event.release.body }}
+        tag_name: ${{ steps.semver.outputs.patch }}
+        release_name: ${{ github.event.repository.name }} - ${{ steps.semver.outputs.patch }}
+        body: Test
         draft: false
         prerelease: false
