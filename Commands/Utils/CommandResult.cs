@@ -6,9 +6,10 @@
 ///			Author: Craig Craig (https://github.com/CraigCraig)
 ///		License:     MIT License (http://opensource.org/licenses/MIT)
 /// ======================================================================
-namespace CheetahToolbox;
+namespace CheetahToolbox.Commands;
 
-public static partial class GlobalStrings
+public class CommandResult(bool success = true, string message = "")
 {
-    public const string RegistryInstallPath = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\CheetahToolbox";
+    public bool Success { get; private set; } = success;
+    public string Message { get; private set; } = message;
 }

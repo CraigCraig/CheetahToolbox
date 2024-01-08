@@ -8,13 +8,13 @@
 /// ======================================================================
 namespace CheetahToolbox.Exceptions;
 
-public class VersionNotFoundException : Exception
+public class LoadGroupsException : Exception
 {
     public override IDictionary Data => base.Data;
 
     public override string? HelpLink { get => base.HelpLink; set => base.HelpLink = value; }
 
-    public override string Message => base.Message;
+    public override string Message => "Failed to load Groups";
 
     public override string? Source { get => base.Source; set => base.Source = value; }
 

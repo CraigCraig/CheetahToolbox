@@ -3,6 +3,8 @@ These are notes on Windows
 
 ## General Info
 
+https://renenyffenegger.ch/notes/Windows/
+
 Start Menu Locations
 ```
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\

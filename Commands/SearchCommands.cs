@@ -6,9 +6,17 @@
 ///			Author: Craig Craig (https://github.com/CraigCraig)
 ///		License:     MIT License (http://opensource.org/licenses/MIT)
 /// ======================================================================
-namespace CheetahToolbox;
+#if DEBUG && EDITOR
+namespace CheetahToolbox.Commands;
 
-public static partial class GlobalStrings
+[Command]
+public class SearchCommands() : CommandBase()
 {
-    public const string RegistryInstallPath = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\CheetahToolbox";
+    [Command("Search")]
+    public static void Search() => Console.WriteLine("WIP: Coming Soon.."); // WIP: Search
+
+    // TODO: Search Files
+    // TODO: Search Registry
+    // TODO: Search Package Managers
 }
+#endif

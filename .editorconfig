@@ -1,8 +1,8 @@
-# Global .editorconfig file
+# Craig's' Universal .editorconfig file
 # ===========================================
 # Created and maintained by https://github.com/CraigCraig
 # ===========================================
-# This file is used by the Visual Studio Code editor to maintain consistent coding styles between editors and developers.
+# This file is used by the .NET tooling to maintain consistent coding styles between editors and developers.
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options?view=vs-2022
 # https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2022
 # http://editorconfig.org
@@ -30,7 +30,7 @@ ident_style = tab
 indent_size = 4
 
 # XML Files
-[*.xml]
+[*.{xml}]
 ident_style = tab
 indent_size = 4
 
@@ -89,3 +89,12 @@ dotnet_diagnostic.CA1305.severity = none
 
 # CA1838: Avoid 'StringBuilder' parameters for P/Invokes
 dotnet_diagnostic.CA1838.severity = none
+
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = suggestion
+
+# CS9124: Parameter is captured into the state of the enclosing type and its value is also used to initialize a field, property, or event.
+dotnet_diagnostic.CS9124.severity = none
+
+# IDE0130: Namespace does not match folder structure
+dotnet_diagnostic.IDE0130.severity = silent

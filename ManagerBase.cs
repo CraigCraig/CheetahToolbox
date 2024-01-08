@@ -6,14 +6,18 @@
 ///			Author: Craig Craig (https://github.com/CraigCraig)
 ///		License:     MIT License (http://opensource.org/licenses/MIT)
 /// ======================================================================
-#if WINDOWS
 namespace CheetahToolbox;
 
-public static partial class GlobalStrings
+public abstract class ManagerBase
 {
-    public static class Chocolatey
+    public readonly string Name;
+    public readonly ToolboxContext Context;
+    public readonly Logger Log;
+
+    public ManagerBase(ToolboxContext context, string name)
     {
-        public const string InstallCommand = "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))";
+        Name = name;
+        Context = context;
+        Log = new Logger($"{Name}");
     }
 }
-#endif

@@ -6,14 +6,12 @@
 ///			Author: Craig Craig (https://github.com/CraigCraig)
 ///		License:     MIT License (http://opensource.org/licenses/MIT)
 /// ======================================================================
-#if WINDOWS
 namespace CheetahToolbox;
-
-public static partial class GlobalStrings
+public class SettingsManager : ManagerBase
 {
-    public static class Chocolatey
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "")]
+    public SettingsManager(ToolboxContext context, string name) : base(context, name)
     {
-        public const string InstallCommand = "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))";
+        // WIP: Implement Settings Manager
     }
 }
-#endif

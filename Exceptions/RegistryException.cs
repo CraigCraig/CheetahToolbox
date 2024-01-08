@@ -8,7 +8,7 @@
 /// ======================================================================
 namespace CheetahToolbox.Exceptions;
 
-public class VersionNotFoundException : Exception
+public class RegistryException : Exception
 {
     public override IDictionary Data => base.Data;
 

@@ -1,13 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <ProjectName>CheetahToolbox</ProjectName>
         <OutputType>Exe</OutputType>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Using Include="CheetahUtils" />
-      <ProjectReference Include="$(CheetahUtils)" />
-    </ItemGroup>
 
 </Project>

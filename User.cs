@@ -9,11 +9,17 @@
 #if WINDOWS
 namespace CheetahToolbox;
 
-public static partial class GlobalStrings
+public static class User
 {
-    public static class Chocolatey
+    public static string Name
     {
-        public const string InstallCommand = "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))";
+        get
+        {
+            string? name = Environment.UserName;
+            if (string.IsNullOrEmpty(name))
+                name = Environment.GetEnvironmentVariable("USERNAME");
+            return name ?? "";
+        }
     }
 }
 #endif

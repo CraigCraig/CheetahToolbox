@@ -6,9 +6,12 @@
 ///			Author: Craig Craig (https://github.com/CraigCraig)
 ///		License:     MIT License (http://opensource.org/licenses/MIT)
 /// ======================================================================
-namespace CheetahToolbox;
+namespace CheetahToolbox.Modules;
 
-public static partial class GlobalStrings
+public class ModuleContext : ToolboxContext
 {
-    public const string RegistryInstallPath = @"Software\Microsoft\Windows\CurrentVersion\Uninstall\CheetahToolbox";
+    public ModuleContext(CheetahToolbox toolbox, ModuleBase module) : base(toolbox)
+    {
+        Console.WriteLine($"ModuleContext: {GetType().FullName}");
+    }
 }

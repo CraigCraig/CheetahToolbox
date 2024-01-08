@@ -1,9 +1,15 @@
-﻿#if WINDOWS || WINDOWS_FAKE
+/// ======================================================================
+///		CheetahToolbox: (https://github.com/CraigCraig/CheetahToolbox)
+///				Project:  Craig's CheetahToolbox a Swiss Army Knife
+///
+///
+///			Author: Craig Craig (https://github.com/CraigCraig)
+///		License:     MIT License (http://opensource.org/licenses/MIT)
+/// ======================================================================
 namespace CheetahToolbox;
 
-public struct StringNameValuePair
+public struct StringNameValuePair(string name, string value)
 {
-    public string Name;
-    public string Value;
+    public string Name = name;
+    public string Value = value;
 }
-#endif
